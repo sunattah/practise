@@ -1,9 +1,5 @@
 package main
 
-import (
-	"fmt"
-)
-
 func AlphaPosition(c rune) int {
 	if c >= 'a' && c <= 'z' {
 		return int(c - 'a' + 1)
@@ -13,12 +9,7 @@ func AlphaPosition(c rune) int {
 	}
 	return -1
 }
-func Any(f func(string) bool, a []string) bool {
-	
 
-}
+// func Any(f func(string) bool, a []string) bool {
 
-func main() {
-	fmt.Println(AlphaPosition('a'))
-	
-}
+// }
