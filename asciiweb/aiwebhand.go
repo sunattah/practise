@@ -17,11 +17,3 @@ func aiwebHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 }
-
-func main() {
-	http.HandleFunc("/", aiwebHandler)
-
-	fmt.Println("server running on http://localhost:8080")
-
-	http.ListenAndServe(":8080", nil)
-}
