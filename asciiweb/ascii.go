@@ -2,8 +2,8 @@ package main
 
 import (
 	"fmt"
+	"html/template"
 	"net/http"
-	"text/template"
 )
 
 func aiwebHand(w http.ResponseWriter, r *http.Request) {
@@ -15,11 +15,6 @@ func aiwebHand(w http.ResponseWriter, r *http.Request) {
 	tem, err := template.ParseFiles("templates/index.html")
 	if err != nil {
 		http.Error(w, "server error", 500)
-		return
-	}
-	g := r.FormValue("banner")
-	if g == "" {
-		http.Error(w, "file is empty", 400)
 		return
 	}
 
