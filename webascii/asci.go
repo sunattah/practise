@@ -41,7 +41,7 @@ func main() {
 	// 	fmt.Println("Usage go run . <TEXT> [STRING]")
 	// }
 	input := os.Args[1]
-	bannerm := "standard"
+	bannerm := "standard.txt"
 	if len(os.Args) == 3 {
 		bannerm = os.Args[2] + ".txt"
 	}
