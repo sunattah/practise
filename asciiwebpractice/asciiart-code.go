@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"os"
 	"strings"
 )
@@ -34,4 +35,31 @@ func render(input string, banner map[rune][]string) []string {
 func spli(input string) []string {
 	line := strings.ReplaceAll(input, "\\n", "\n")
 	return strings.Split(line, "\n")
+}
+func main() {
+	// if len(os.Args) < 2 {
+	// 	fmt.Println("Usage go run . <TEXT> [STRING]")
+	// }
+	input := os.Args[1]
+	bannerm := "standard.txt"
+	if len(os.Args) == 3 {
+		bannerm = os.Args[2] + ".txt"
+	}
+	g, err := banner(bannerm)
+	if err != nil {
+		fmt.Printf("no such file %s", err)
+		os.Exit(0)
+	}
+	splitf := spli(input)
+	for _, ch := range splitf {
+		if ch == "" {
+			fmt.Println()
+			continue
+		}
+		renderline := render(ch, g)
+		for _, char := range renderline {
+			fmt.Println(char)
+		}
+	}
+
 }
