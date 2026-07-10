@@ -23,7 +23,7 @@ func aiwebHand(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	tem.Execute(w, nil)
+	tem.Execute(w, result{})
 
 }
 
@@ -53,7 +53,7 @@ func ascciiHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "server error", 500)
 		return
 	}
-	data := result{ss
+	data := result{
 	Result: gen,
 	Text:   text,
 	Banner: banner,
