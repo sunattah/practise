@@ -6,14 +6,12 @@
 
         <h1>Ascii-Art-Web</h1>
 
-        <textarea name="text"></textarea>
-
-        <select name="banner">
-            <option value="standard">standard</option>
-            <option value="shadow">shadow</option>
-            <option value="thinkertoy">thinkertoy</option>
-
-        </select>
+<textarea name="text">{{.Text}}</textarea>
+       <select name="banner">
+    <option value="standard" {{if eq .Banner "standard"}}selected{{end}}>standard</option>
+    <option value="shadow" {{if eq .Banner "shadow"}}selected{{end}}>shadow</option>
+    <option value="thinkertoy" {{if eq .Banner "thinkertoy"}}selected{{end}}>thinkertoy</option>
+</select>
             <button type="submit">Generate</button>
         <pre>{{.Result}}</pre>
 

@@ -8,8 +8,9 @@ import (
 
 type result struct {
 	Result string
+	Text   string
+	Banner string
 }
-
 func aiwebHand(w http.ResponseWriter, r *http.Request) {
 	if r.URL.Path != "/" {
 		http.NotFound(w, r)
@@ -52,7 +53,11 @@ func ascciiHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "server error", 500)
 		return
 	}
-	data := result{Result: gen}
+	data := result{
+	Result: gen,
+	Text:   text,
+	Banner: banner,
+}
 
 	tem.Execute(w, data)
 
