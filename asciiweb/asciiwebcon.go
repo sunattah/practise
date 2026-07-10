@@ -53,7 +53,7 @@ func ascciiHandler(w http.ResponseWriter, r *http.Request) {
 		http.Error(w, "server error", 500)
 		return
 	}
-	data := result{
+	data := result{ss
 	Result: gen,
 	Text:   text,
 	Banner: banner,
