@@ -19,9 +19,14 @@ func markRanges(line, sub string) []bool {
 	colored := make([]bool, len(line))
 
 	for _, ch := range indecies {
+		for j := ch; j < ch+len(sub); j++ {
+			colored[j] = true
+		}
 	}
+	return colored
 
 }
 func main() {
 	fmt.Println(findAll("a king kitten have kit", "kit"))
+	fmt.Println(markRanges("a king kitten have kit", "kit"))
 }
