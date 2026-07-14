@@ -1,13 +1,19 @@
-package  main 
+package main
 
-import(
-	"fmt"
-)
+import "fmt"
+
 func findAll(line, sub string) []int {
-	for 
+	lenLine := len(line)
+	lenSub := len(sub)
+	lenslice := []int{}
+	for i := 0; i <= lenLine- lenSub; i++ {
+		if line[i:i+lenSub] == sub {
+			lenslice = append(lenslice, i)
 
+		}
+	}
+	return lenslice
 }
-
 func main() {
-	fmt.Println("\033[31mHello", "WOrld")
+	fmt.Println(findAll("a king kitten have kit", "kit"))
 }
