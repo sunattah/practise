@@ -26,7 +26,15 @@ func markRanges(line, sub string) []bool {
 	return colored
 
 }
+func compareLengths(str string) {
+	fmt.Println(len(str))
+	fmt.Println(len([]rune(str)))
+}
+
 func main() {
 	fmt.Println(findAll("a king kitten have kit", "kit"))
+	
 	fmt.Println(markRanges("a king kitten have kit", "kit"))
+	compareLengths("hello")
+	compareLengths("café")
 }
