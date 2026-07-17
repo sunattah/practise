@@ -32,6 +32,17 @@ func compareLengths(str string) {
 }
 
 func main() {
+	for i := 0; i < 3; i ++ {
+		for j := 0; j < 3; j ++ {
+			num := i*3 - j + 1
+			if num == 5 {
+				fmt.Println("\033[32m",num,"\033[0m")
+			}else{
+				fmt.Print(num)
+			}
+		}
+		
+	}
 	fmt.Println(findAll("a king kitten have kit", "kit"))
 	
 	fmt.Println(markRanges("a king kitten have kit", "kit"))
