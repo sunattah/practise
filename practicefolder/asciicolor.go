@@ -36,7 +36,7 @@ func main() {
 		for j := 0; j < 3; j ++ {
 			num := i*3 - j + 1
 			if num == 5 {
-				fmt.Println("\033[32m",num,"\033[0m")
+				fmt.Println("\033[31m",num,"\033[0m")
 			}else{
 				fmt.Print(num)
 			}
@@ -44,6 +44,8 @@ func main() {
 		fmt.Print()
 		
 	}
+	fmt.Print()
+
 	fmt.Println(findAll("a king kitten have kit", "kit"))
 	
 	fmt.Println(markRanges("a king kitten have kit", "kit"))
