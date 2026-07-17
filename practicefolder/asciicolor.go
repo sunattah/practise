@@ -41,6 +41,7 @@ func main() {
 				fmt.Print(num)
 			}
 		}
+		fmt.Print()
 		
 	}
 	fmt.Println(findAll("a king kitten have kit", "kit"))
