@@ -9,4 +9,6 @@ def grade(score):
         return "D"
     else:
         return "F"
-print(grade(49))       
+print(grade(95))
+print(grade(72))       
+
