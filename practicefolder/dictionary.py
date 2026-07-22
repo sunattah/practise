@@ -11,7 +11,7 @@ from os import name
 
 
 count = {
-    name : "monica",
+    name : "monica"
 }
-for x in count:
- print(x)
+words = ["a", "b", "b","a", "c", "c"]
+print(words[1], count)
