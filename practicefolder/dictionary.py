@@ -13,5 +13,5 @@ from os import name
 count = {
     name : "monica",
 }
-count.get(name)
+count.copy()
 print(count)
