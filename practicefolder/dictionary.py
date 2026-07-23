@@ -7,11 +7,8 @@
 #         return counts
 # print(remove_duplicates([1, 3, 4, 5, 5, 5, 5, 6, 6]))
 
-from os import name
-
-
-count = {
-    name : "monica"
-}
-words = ["a", "b", "b","a", "c", "c"]
-print(words[3], count)
+letter = ["a", "a", "a", "z", "z", "z", "b", "b", "b", "c"]
+count = {}
+for i in letter:
+    count[i] = count.get(i , 0) + 1
+print(count)
