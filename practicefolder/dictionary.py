@@ -14,4 +14,4 @@ count = {
     name : "monica"
 }
 words = ["a", "b", "b","a", "c", "c"]
-print(words[1], count)
+print(words[3], count)
